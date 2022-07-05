@@ -122,7 +122,7 @@ module "eks_blueprints" {
         "requests.memory" = "20Gi",
         "limits.cpu"      = "20000m",
         "limits.memory"   = "50Gi",
-        "pods"            = "10",
+        "pods"            = "20",
         "secrets"         = "10",
         "services"        = "10"
       }
