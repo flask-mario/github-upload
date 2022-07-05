@@ -100,4 +100,3 @@ module "eks_blueprints" {
 
   tags = local.tags
 }
-
