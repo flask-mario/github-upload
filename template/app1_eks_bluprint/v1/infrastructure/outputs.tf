@@ -16,3 +16,13 @@ output "configure_kubectl" {
   description = "Configure kubectl: make sure you're logged in with the correct AWS profile and run the following command to update your kubeconfig"
   value       = module.eks_blueprints.configure_kubectl
 }
+
+output "team_riker" {
+  description = "Role Arn of team-riker"
+  value       = module.eks_blueprints.teams[*].application_teams_iam_role_arn["team-riker"]
+}
+
+output "platform_team" {
+  description = "Role Arn of platform-team"
+  value       = module.eks_blueprints.teams[*].platform_teams_iam_role_arn["admin"]
+}
