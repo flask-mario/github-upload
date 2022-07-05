@@ -123,8 +123,8 @@ module "eks_blueprints" {
         "limits.cpu"      = "20000m",
         "limits.memory"   = "50Gi",
         "pods"            = "20",
-        "secrets"         = "10",
-        "services"        = "10"
+        "secrets"         = "20",
+        "services"        = "20"
       }
       ## Manifests Example: we can specify a directory with kubernetes manifests that can be automatically applied in the team-riker namespace.
       # manifests_dir = "./manifests-team-red"
