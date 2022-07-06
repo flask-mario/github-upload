@@ -24,32 +24,9 @@ schema:
           title: "User"
           type: string
           description: "IAM User for cluster access"
+          default: "protondev"
         kubernetes_version:
           title: "Kubernetes version"
           type: string
           enum: ["1.20","1.21"]
           default: "1.21"
-        aws_load_balancer_controller:
-          title: "Enable AWS Load Balancer Controller Add-On"
-          type: boolean
-          default: true
-        metrics_server:
-          title: "Enable Metrics Server Add-On"
-          type: boolean
-          default: true
-        aws_for_fluentbit:
-          title: "Enable AWS for FluentBit Add-On"
-          type: boolean
-          default: true
-        cert_manager:
-          title: "Enable Cert Manager Add-On"
-          type: boolean
-          default: true
-        vpa:
-          title: "Enable VPA Add-On"
-          type: boolean
-          default: true
-        karpenter:
-          title: "Enable Karpenter Add-On"
-          type: boolean
-          default: true

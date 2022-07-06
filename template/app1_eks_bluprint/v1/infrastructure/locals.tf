@@ -1,10 +1,10 @@
 locals {
-  name            = basename(path.cwd)
+  name            = var.environment.inputs.cluster_name
   region          = data.aws_region.current.name
-  cluster_version = "1.21"
+  cluster_version = var.environment.inputs.kubernetes_version
   #terraform_version = "Terraform v1.0.1"
 
-  vpc_cidr      = "10.0.0.0/16"
+  vpc_cidr      = var.environment.inputs.vpc_cidr
   azs           = slice(data.aws_availability_zones.available.names, 0, 3)
 
 
