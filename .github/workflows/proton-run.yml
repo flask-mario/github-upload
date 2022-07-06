@@ -12,7 +12,7 @@ on:
       - '**/.proton/deployment-metadata.json'
   push:
     branches:
-      - main
+      - proton-feature
     paths:
       - '**/.proton/deployment-metadata.json'
 
