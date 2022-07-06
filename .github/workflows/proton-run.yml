@@ -193,11 +193,9 @@ jobs:
       run: terraform init -backend-config="bucket=${{ needs.get-deployment-data.outputs.state_bucket }}" -backend-config="key=${{ needs.get-deployment-data.outputs.working_directory }}terraform.tfstate" -backend-config="region=${{ needs.get-deployment-data.outputs.target_region }}"
 
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      id: tf_fmt
-      run: |
-        terraform fmt -diff -check
-        echo "::set-output name=bash_return_Value::True"
+    #- name: Terraform Format
+    #  id: tf_fmt
+    #  run: terraform fmt -diff -check
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
