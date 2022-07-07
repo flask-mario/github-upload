@@ -1,0 +1,10 @@
+{
+  "deploymentId" : "e9aa5b96-5032-4884-8438-7a4b60ac03bb",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:027500179340:environment/poc-dev-env",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:027500179340:environment-template/app1_eks_bluprint",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "7"
+  }
+}
