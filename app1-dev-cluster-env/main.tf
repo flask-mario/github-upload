@@ -1,5 +1,9 @@
 /*
-This file is no longer managed by AWS Proton. The associated resource has been deleted in Proton.
+This file is managed by AWS Proton. Any changes made directly to this file will be overwritten the next time AWS Proton performs an update.
+
+To manage this resource, see AWS Proton Resource: arn:aws:proton:ap-northeast-1:027500179340:environment/app1-dev-cluster-env
+
+If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
 
 module "vpc" {
@@ -189,7 +193,7 @@ module "kubernetes-addons" {
   enable_ingress_nginx                = false
   enable_keda                         = false
   enable_metrics_server               = false
-  enable_prometheus                   = false
+  enable_prometheus                   = false #var.environment.inputs.prometheus
   enable_traefik                      = false
   enable_vpa                          = false
   enable_yunikorn                     = false
