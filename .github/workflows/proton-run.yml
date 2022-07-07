@@ -228,7 +228,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ needs.get-deployment-data.outputs.environment }}
 
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.get-deployment-data.outputs.is_deleted == 'false'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/proton-feature' && needs.get-deployment-data.outputs.is_deleted == 'false'
     
     permissions:
       id-token: write
@@ -286,7 +286,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: ${{ needs.get-deployment-data.outputs.environment }}
 
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.get-deployment-data.outputs.is_deleted == 'true'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/proton-feature' && needs.get-deployment-data.outputs.is_deleted == 'true'
     
     permissions:
       id-token: write
