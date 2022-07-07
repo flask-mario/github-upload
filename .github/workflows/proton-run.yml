@@ -265,9 +265,13 @@ jobs:
       run: |
         # Get outputs as json
         outputs_json=$(terraform output -json)
+        
+        echo $outputs_json
 
         # Map Terraform output JSON to Proton outputs JSON
         formatted_outputs=( $(echo $outputs_json | jq "to_entries|map({key: .key, valueString: .value.value})") )
+        
+        echo formatted_outputs
       
         # Notify proton
         aws proton notify-resource-deployment-status-change --region ${{ needs.get-deployment-data.outputs.proton_region }} --resource-arn ${{ needs.get-deployment-data.outputs.resource_arn }} --status SUCCEEDED --deployment-id ${{ needs.get-deployment-data.outputs.deployment_id }} --outputs "${formatted_outputs[*]}"
