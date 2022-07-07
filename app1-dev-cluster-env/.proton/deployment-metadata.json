@@ -1,0 +1,10 @@
+{
+  "deploymentId" : "f800e78e-6036-47dc-8bf7-9ccef1767964",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:027500179340:environment/app1-dev-cluster-env",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:027500179340:environment-template/app1_eks_bluprint",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "4"
+  }
+}
