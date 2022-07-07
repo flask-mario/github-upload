@@ -212,7 +212,7 @@ jobs:
     # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
     - name: Terraform Apply
       id: tf_apply
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      if: github.ref == 'refs/heads/proton-freature' && github.event_name == 'push'
       run: terraform apply -auto-approve -var="aws_region=${{ needs.get-deployment-data.outputs.target_region }}"
     
     # If this completes, then the entire workflow has successfully completed
