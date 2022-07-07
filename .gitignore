@@ -5,3 +5,5 @@ terraform.tfstate
 terraform.tfstate.*
 .terraform.lock.*
 .terraform.tfstate.*
+
+# aws proton notify-resource-deployment-status-change --region ap-northeast-1 --resource-arn arn:aws:proton:ap-northeast-1:027500179340:environment/app1-dev-cluster-env --status SUCCEEDED
