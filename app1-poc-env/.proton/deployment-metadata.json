@@ -1,6 +1,6 @@
 {
-  "deploymentId" : "bb41c23d-101e-4a54-8365-4660f788cfa5",
-  "isResourceDeleted" : false,
+  "deploymentId" : "<proton-resource-deleted>",
+  "isResourceDeleted" : true,
   "resourceMetadata" : {
     "arn" : "arn:aws:proton:ap-northeast-1:027500179340:environment/app1-poc-env",
     "templateArn" : "arn:aws:proton:ap-northeast-1:027500179340:environment-template/app1_eks_bluprint",
