@@ -30,6 +30,6 @@ output "platform_team" {
 output "platform_teams_configure_kubectl" {
   description = "The command to use to configure the kubeconfig file to be used with kubectl."
   value = tomap({
-    for k, v in module.eks_blueprints.teams[0].platform_teams_iam_role_arn : k => "aws eks --region ${data.aws_region.current.id} update-kubeconfig --name ${module.eks_blueprints.cluster_name}  --role-arn ${v}"
+    for k, v in module.eks_blueprints.teams[0].platform_teams_iam_role_arn : k => "aws eks --region ${data.aws_region.current.id} update-kubeconfig --name ${module.eks_blueprints.eks_cluster_id}  --role-arn ${v}"
   })["platform-team"]
 }
