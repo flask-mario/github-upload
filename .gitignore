@@ -2,4 +2,5 @@
 *.swp
 .terraform
 .terraform.*
-
+terraform.tfstate
+terraform.tfstate.*
