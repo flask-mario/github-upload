@@ -93,8 +93,13 @@ module "eks_blueprints" {
   managed_node_groups = {
     mg_5 = {
       node_group_name = "managed-ondemand"
-      instance_types  = ["m5.xlarge"]
+      instance_types  = ["m5.large"]
       subnet_ids      = module.vpc.private_subnets
+      
+      # Node Group scaling configuration
+      desired_size    = 3
+      max_size        = 3
+      min_size        = 3
     }
   }
 
